@@ -1,5 +1,7 @@
 # Agentflow v8.4.15
 
+此 repo 保留 **Agentflow 8**。Agentflow 9 穩定版位於 [agfnow/agentflow](https://github.com/agfnow/agentflow)。要繼續使用 v8，請明確從 `agfnow/agentflow-v8` 安裝；既有安裝若仍記錄舊 repo 網址，請先重新綁定來源，再執行更新。v8 與 v9 共用 `agentflow` 技能／外掛名稱：同一主機／專案只啟用其中一版。
+
 [English](README.md) · **繁體中文**
 
 幫 AI 助理準備一本專案筆記，明天開新的對話，也能接著今天的工作做。
@@ -23,13 +25,13 @@ Agentflow 已驗證 **Codex 和 Claude Code** 的整合，也提供 通用核心
 在終端機執行以下指令，再選擇助理和安裝範圍：
 
 ```sh
-npx skills add agfnow/agentflow
+npx skills add agfnow/agentflow-v8
 ```
 
 若要使用 Claude Code 外掛，先在 Claude Code 加入外掛市集：
 
 ```text
-/plugin marketplace add agfnow/agentflow
+/plugin marketplace add agfnow/agentflow-v8
 ```
 
 接著從該市集安裝 `agentflow` 外掛。外掛是否自動更新，依你的 [Claude Code 市集設定](https://code.claude.com/docs/en/discover-plugins#configure-auto-updates)而定。安裝或更新後，請開啟新的助理對話。
@@ -46,7 +48,7 @@ npx skills add agfnow/agentflow
 npx skills update agentflow
 ```
 
-目前 [Skills CLI](https://github.com/vercel-labs/skills#skills-update) 是依已安裝的 skill 名稱更新。`agfnow/agentflow` 是安裝來源，因此 `npx skills update agfnow/agentflow` 不是目前依名稱更新的語法。全域安裝可加上 `-g`；專案內安裝則在該專案執行，並加上 `-p`。
+目前 [Skills CLI](https://github.com/vercel-labs/skills#skills-update) 是依已安裝的 skill 名稱更新。`agfnow/agentflow-v8` 是安裝來源，因此 `npx skills update agfnow/agentflow-v8` 不是目前依名稱更新的語法。全域安裝可加上 `-g`；專案內安裝則在該專案執行，並加上 `-p`。
 
 若想自動更新，建議在 macOS 或 Linux 設定每週一次的 **crontab 工作排程**。可以直接請 agent 協助，依你的安裝位置設定。[使用指南](skills/agentflow/docs/AG_GUIDE.zh-tw.md#定期更新-skill)提供週一上午更新的範例，包含完整路徑與執行紀錄。
 

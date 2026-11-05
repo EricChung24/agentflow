@@ -1,5 +1,7 @@
 # Agentflow v8.4.15
 
+This repository preserves **Agentflow 8**. Stable Agentflow 9 uses [agfnow/agentflow](https://github.com/agfnow/agentflow). To keep v8, explicitly install from `agfnow/agentflow-v8`; rebind existing installations that still record the old repository URL before running updates. V8 and v9 share the `agentflow` skill/plugin name: use one active version per host/project.
+
 **English** · [繁體中文](README.zh-tw.md)
 
 Give your AI assistant a project notebook, so tomorrow’s conversation can pick up today’s work.
@@ -23,13 +25,13 @@ You need Node.js 18 or newer and a host with file and command tools. Codex and C
 Run this in a terminal and choose your assistant and installation scope:
 
 ```sh
-npx skills add agfnow/agentflow
+npx skills add agfnow/agentflow-v8
 ```
 
 For the Claude Code plugin route, add the marketplace in Claude Code:
 
 ```text
-/plugin marketplace add agfnow/agentflow
+/plugin marketplace add agfnow/agentflow-v8
 ```
 
 Then install the `agentflow` plugin from that marketplace. Plugin updates follow your [Claude Code marketplace update settings](https://code.claude.com/docs/en/discover-plugins#configure-auto-updates). Start a new assistant session after installation or updates.
@@ -46,7 +48,7 @@ If you installed through `npx skills add`, periodically run:
 npx skills update agentflow
 ```
 
-The [Skills CLI](https://github.com/vercel-labs/skills#skills-update) takes the installed skill name for updates. `agfnow/agentflow` is the installation source, so `npx skills update agfnow/agentflow` is not the current name-based update syntax. Add `-g` for global installs, or run from the project with `-p` for project installs.
+The [Skills CLI](https://github.com/vercel-labs/skills#skills-update) takes the installed skill name for updates. `agfnow/agentflow-v8` is the installation source, so `npx skills update agfnow/agentflow-v8` is not the current name-based update syntax. Add `-g` for global installs, or run from the project with `-p` for project installs.
 
 We recommend a weekly **crontab** job on macOS or Linux if you want automatic updates. Ask your agent to set it up for your installation. The [guide](skills/agentflow/docs/AG_GUIDE.md#keep-the-skill-up-to-date) includes a Monday-morning example, explicit paths, and logging.
 
